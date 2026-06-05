@@ -32,6 +32,43 @@
             "related": ".pdb"
           }
         }
+      },
+      "EVChargingBackend.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "EVChargingBackend.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EVChargingBackend.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EVChargingBackend.Application.dll": {}
+        }
+      },
+      "EVChargingBackend.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/EVChargingBackend.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EVChargingBackend.Domain.dll": {}
+        }
+      },
+      "EVChargingBackend.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "EVChargingBackend.Application": "1.0.0",
+          "EVChargingBackend.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EVChargingBackend.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EVChargingBackend.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -68,10 +105,27 @@
         "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "EVChargingBackend.Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/EVChargingBackend.Application.csproj",
+      "msbuildProject": "../Application/EVChargingBackend.Application.csproj"
+    },
+    "EVChargingBackend.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/EVChargingBackend.Domain.csproj",
+      "msbuildProject": "../Domain/EVChargingBackend.Domain.csproj"
+    },
+    "EVChargingBackend.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/EVChargingBackend.Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/EVChargingBackend.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "EVChargingBackend.Application >= 1.0.0",
+      "EVChargingBackend.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.4"
     ]
   },
@@ -99,7 +153,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/workspaces/EVChargingBackend/src/Application/EVChargingBackend.Application.csproj": {
+              "projectPath": "/workspaces/EVChargingBackend/src/Application/EVChargingBackend.Application.csproj"
+            },
+            "/workspaces/EVChargingBackend/src/Infrastructure/EVChargingBackend.Infrastructure.csproj": {
+              "projectPath": "/workspaces/EVChargingBackend/src/Infrastructure/EVChargingBackend.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

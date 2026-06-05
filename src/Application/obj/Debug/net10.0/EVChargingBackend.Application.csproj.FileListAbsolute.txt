@@ -1,0 +1,16 @@
+/workspaces/EVChargingBackend/src/Application/bin/Debug/net10.0/EVChargingBackend.Application.deps.json
+/workspaces/EVChargingBackend/src/Application/bin/Debug/net10.0/EVChargingBackend.Application.dll
+/workspaces/EVChargingBackend/src/Application/bin/Debug/net10.0/EVChargingBackend.Application.pdb
+/workspaces/EVChargingBackend/src/Application/bin/Debug/net10.0/EVChargingBackend.Domain.dll
+/workspaces/EVChargingBackend/src/Application/bin/Debug/net10.0/EVChargingBackend.Domain.pdb
+/workspaces/EVChargingBackend/src/Application/obj/Debug/net10.0/EVChargingBackend.Application.csproj.AssemblyReference.cache
+/workspaces/EVChargingBackend/src/Application/obj/Debug/net10.0/EVChargingBackend.Application.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/EVChargingBackend/src/Application/obj/Debug/net10.0/EVChargingBackend.Application.AssemblyInfoInputs.cache
+/workspaces/EVChargingBackend/src/Application/obj/Debug/net10.0/EVChargingBackend.Application.AssemblyInfo.cs
+/workspaces/EVChargingBackend/src/Application/obj/Debug/net10.0/EVChargingBackend.Application.csproj.CoreCompileInputs.cache
+/workspaces/EVChargingBackend/src/Application/obj/Debug/net10.0/EVChargingBackend.Application.sourcelink.json
+/workspaces/EVChargingBackend/src/Application/obj/Debug/net10.0/EVChargi.DD6D8404.Up2Date
+/workspaces/EVChargingBackend/src/Application/obj/Debug/net10.0/EVChargingBackend.Application.dll
+/workspaces/EVChargingBackend/src/Application/obj/Debug/net10.0/refint/EVChargingBackend.Application.dll
+/workspaces/EVChargingBackend/src/Application/obj/Debug/net10.0/EVChargingBackend.Application.pdb
+/workspaces/EVChargingBackend/src/Application/obj/Debug/net10.0/ref/EVChargingBackend.Application.dll

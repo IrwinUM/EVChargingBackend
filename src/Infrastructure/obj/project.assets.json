@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "EVChargingBackend.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "EVChargingBackend.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EVChargingBackend.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EVChargingBackend.Application.dll": {}
+        }
+      },
+      "EVChargingBackend.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/EVChargingBackend.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EVChargingBackend.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "EVChargingBackend.Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/EVChargingBackend.Application.csproj",
+      "msbuildProject": "../Application/EVChargingBackend.Application.csproj"
+    },
+    "EVChargingBackend.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/EVChargingBackend.Domain.csproj",
+      "msbuildProject": "../Domain/EVChargingBackend.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "EVChargingBackend.Application >= 1.0.0",
+      "EVChargingBackend.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/codespace/.nuget/packages/": {}
@@ -31,7 +69,14 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/workspaces/EVChargingBackend/src/Application/EVChargingBackend.Application.csproj": {
+              "projectPath": "/workspaces/EVChargingBackend/src/Application/EVChargingBackend.Application.csproj"
+            },
+            "/workspaces/EVChargingBackend/src/Domain/EVChargingBackend.Domain.csproj": {
+              "projectPath": "/workspaces/EVChargingBackend/src/Domain/EVChargingBackend.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

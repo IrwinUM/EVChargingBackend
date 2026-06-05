@@ -18,4 +18,9 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Application\EVChargingBackend.Application.csproj" />
+    <ProjectReference Include="..\..\src\Domain\EVChargingBackend.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

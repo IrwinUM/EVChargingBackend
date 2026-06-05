@@ -8,6 +8,24 @@
           "build/netstandard2.0/coverlet.collector.targets": {}
         }
       },
+      "Microsoft.AspNetCore.OpenApi/10.0.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "2.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Microsoft.CodeCoverage/17.14.1": {
         "type": "package",
         "compile": {
@@ -36,6 +54,19 @@
         "build": {
           "build/net8.0/Microsoft.NET.Test.Sdk.props": {},
           "build/net8.0/Microsoft.NET.Test.Sdk.targets": {}
+        }
+      },
+      "Microsoft.OpenApi/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.OpenApi.dll": {
+            "related": ".pdb"
+          }
         }
       },
       "Microsoft.TestPlatform.ObjectModel/17.14.1": {
@@ -373,6 +404,61 @@
         "build": {
           "build/net8.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "EVChargingBackend.API/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "EVChargingBackend.Application": "1.0.0",
+          "EVChargingBackend.Infrastructure": "1.0.0",
+          "Microsoft.AspNetCore.OpenApi": "10.0.4"
+        },
+        "compile": {
+          "bin/placeholder/EVChargingBackend.API.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EVChargingBackend.API.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "EVChargingBackend.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "EVChargingBackend.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EVChargingBackend.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EVChargingBackend.Application.dll": {}
+        }
+      },
+      "EVChargingBackend.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/EVChargingBackend.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EVChargingBackend.Domain.dll": {}
+        }
+      },
+      "EVChargingBackend.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "EVChargingBackend.Application": "1.0.0",
+          "EVChargingBackend.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EVChargingBackend.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EVChargingBackend.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -445,6 +531,23 @@
         "coverlet-icon.png",
         "coverlet.collector.6.0.4.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.OpenApi/10.0.4": {
+      "sha512": "OsEhbmT4Xenukau5YCR867gr/HmuAJ9DqMBPQGTcmdNU/TqBqdcnB+yLNwD/mTdkHzLBB+XG7cI4H1L5B1jx+Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/10.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/cs/Microsoft.AspNetCore.OpenApi.SourceGenerators.dll",
+        "build/Microsoft.AspNetCore.OpenApi.targets",
+        "lib/net10.0/Microsoft.AspNetCore.OpenApi.dll",
+        "microsoft.aspnetcore.openapi.10.0.4.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
     "Microsoft.CodeCoverage/17.14.1": {
@@ -543,6 +646,22 @@
         "lib/net8.0/_._",
         "microsoft.net.test.sdk.17.14.1.nupkg.sha512",
         "microsoft.net.test.sdk.nuspec"
+      ]
+    },
+    "Microsoft.OpenApi/2.0.0": {
+      "sha512": "GGYLfzV/G/ct80OZ45JxnWP7NvMX1BCugn/lX7TH5o0lcVaviavsLMTxmFV2AybXWjbi3h6FF1vgZiTK6PXndw==",
+      "type": "package",
+      "path": "microsoft.openapi/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net8.0/Microsoft.OpenApi.dll",
+        "lib/net8.0/Microsoft.OpenApi.pdb",
+        "lib/netstandard2.0/Microsoft.OpenApi.dll",
+        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
+        "microsoft.openapi.2.0.0.nupkg.sha512",
+        "microsoft.openapi.nuspec"
       ]
     },
     "Microsoft.TestPlatform.ObjectModel/17.14.1": {
@@ -866,10 +985,31 @@
         "xunit.runner.visualstudio.3.1.4.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "EVChargingBackend.API/1.0.0": {
+      "type": "project",
+      "path": "../../src/API/EVChargingBackend.API.csproj",
+      "msbuildProject": "../../src/API/EVChargingBackend.API.csproj"
+    },
+    "EVChargingBackend.Application/1.0.0": {
+      "type": "project",
+      "path": "../../src/Application/EVChargingBackend.Application.csproj",
+      "msbuildProject": "../../src/Application/EVChargingBackend.Application.csproj"
+    },
+    "EVChargingBackend.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../src/Domain/EVChargingBackend.Domain.csproj",
+      "msbuildProject": "../../src/Domain/EVChargingBackend.Domain.csproj"
+    },
+    "EVChargingBackend.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../src/Infrastructure/EVChargingBackend.Infrastructure.csproj",
+      "msbuildProject": "../../src/Infrastructure/EVChargingBackend.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "EVChargingBackend.API >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.14.1",
       "coverlet.collector >= 6.0.4",
       "xunit >= 2.9.3",
@@ -900,7 +1040,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/workspaces/EVChargingBackend/src/API/EVChargingBackend.API.csproj": {
+              "projectPath": "/workspaces/EVChargingBackend/src/API/EVChargingBackend.API.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

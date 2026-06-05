@@ -1,0 +1,12 @@
+/workspaces/EVChargingBackend/src/Domain/bin/Debug/net10.0/EVChargingBackend.Domain.deps.json
+/workspaces/EVChargingBackend/src/Domain/bin/Debug/net10.0/EVChargingBackend.Domain.dll
+/workspaces/EVChargingBackend/src/Domain/bin/Debug/net10.0/EVChargingBackend.Domain.pdb
+/workspaces/EVChargingBackend/src/Domain/obj/Debug/net10.0/EVChargingBackend.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/EVChargingBackend/src/Domain/obj/Debug/net10.0/EVChargingBackend.Domain.AssemblyInfoInputs.cache
+/workspaces/EVChargingBackend/src/Domain/obj/Debug/net10.0/EVChargingBackend.Domain.AssemblyInfo.cs
+/workspaces/EVChargingBackend/src/Domain/obj/Debug/net10.0/EVChargingBackend.Domain.csproj.CoreCompileInputs.cache
+/workspaces/EVChargingBackend/src/Domain/obj/Debug/net10.0/EVChargingBackend.Domain.sourcelink.json
+/workspaces/EVChargingBackend/src/Domain/obj/Debug/net10.0/EVChargingBackend.Domain.dll
+/workspaces/EVChargingBackend/src/Domain/obj/Debug/net10.0/refint/EVChargingBackend.Domain.dll
+/workspaces/EVChargingBackend/src/Domain/obj/Debug/net10.0/EVChargingBackend.Domain.pdb
+/workspaces/EVChargingBackend/src/Domain/obj/Debug/net10.0/ref/EVChargingBackend.Domain.dll
