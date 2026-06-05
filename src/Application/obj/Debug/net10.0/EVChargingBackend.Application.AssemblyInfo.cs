@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EVChargingBackend.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba4b457b94be9e2938515d5a167430872fddf933")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+08ffa0a27850ba664a8a8a635273b4d6637f0f01")]
 [assembly: System.Reflection.AssemblyProductAttribute("EVChargingBackend.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EVChargingBackend.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
