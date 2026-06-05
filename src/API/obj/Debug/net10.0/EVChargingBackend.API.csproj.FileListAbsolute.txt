@@ -38,3 +38,11 @@
 /workspaces/EVChargingBackend/src/API/obj/Debug/net10.0/EVChargingBackend.API.pdb
 /workspaces/EVChargingBackend/src/API/obj/Debug/net10.0/EVChargingBackend.API.genruntimeconfig.cache
 /workspaces/EVChargingBackend/src/API/obj/Debug/net10.0/ref/EVChargingBackend.API.dll
+/workspaces/EVChargingBackend/src/API/bin/Debug/net10.0/FluentValidation.dll
+/workspaces/EVChargingBackend/src/API/bin/Debug/net10.0/FluentValidation.AspNetCore.dll
+/workspaces/EVChargingBackend/src/API/bin/Debug/net10.0/FluentValidation.DependencyInjectionExtensions.dll
+/workspaces/EVChargingBackend/src/API/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.dll
+/workspaces/EVChargingBackend/src/API/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/workspaces/EVChargingBackend/src/API/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Relational.dll
+/workspaces/EVChargingBackend/src/API/bin/Debug/net10.0/Npgsql.dll
+/workspaces/EVChargingBackend/src/API/bin/Debug/net10.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

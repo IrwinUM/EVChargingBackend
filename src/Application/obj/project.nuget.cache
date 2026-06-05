@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AQf2kRlXk/k=",
+  "dgSpecHash": "fW9DRAl2YWQ=",
   "success": true,
   "projectFilePath": "/workspaces/EVChargingBackend/src/Application/EVChargingBackend.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/codespace/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512"
+  ],
   "logs": []
 }

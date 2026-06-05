@@ -1,0 +1,6 @@
+{
+  "EVChargingBackend.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/workspaces\/EVChargingBackend\/src\/API",
+  "EVChargingBackend.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/workspaces\/EVChargingBackend\/src\/Application",
+  "EVChargingBackend.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/workspaces\/EVChargingBackend\/src\/Domain",
+  "EVChargingBackend.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/workspaces\/EVChargingBackend\/src\/Infrastructure"
+}

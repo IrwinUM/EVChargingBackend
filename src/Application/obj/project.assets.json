@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "FluentValidation/12.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {}
+        }
+      },
       "EVChargingBackend.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -15,6 +24,20 @@
     }
   },
   "libraries": {
+    "FluentValidation/12.1.1": {
+      "sha512": "EPpkIe1yh1a0OXyC100oOA8WMbZvqUu5plwhvYcb7oSELfyUZzfxV48BLhvs3kKo4NwG7MGLNgy1RJiYtT8Dpw==",
+      "type": "package",
+      "path": "fluentvalidation/12.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.12.1.1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net8.0/FluentValidation.dll"
+      ]
+    },
     "EVChargingBackend.Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/EVChargingBackend.Domain.csproj",
@@ -23,7 +46,8 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "EVChargingBackend.Domain >= 1.0.0"
+      "EVChargingBackend.Domain >= 1.0.0",
+      "FluentValidation >= 12.1.1"
     ]
   },
   "packageFolders": {
@@ -72,6 +96,12 @@
     "frameworks": {
       "net10.0": {
         "targetAlias": "net10.0",
+        "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[12.1.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
