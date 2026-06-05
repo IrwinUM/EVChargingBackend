@@ -107,3 +107,13 @@
 /workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/System.Diagnostics.EventLog.dll
 /workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll
 /workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll
+/workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.dll
+/workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/Microsoft.Extensions.Caching.Abstractions.dll
+/workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/Microsoft.Extensions.Caching.Memory.dll
+/workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.dll
+/workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/Microsoft.Extensions.Logging.dll
+/workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/Microsoft.Extensions.Logging.Abstractions.dll
+/workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/Microsoft.Extensions.Options.dll
+/workspaces/EVChargingBackend/tests/UnitTests/bin/Debug/net10.0/Microsoft.Extensions.Primitives.dll

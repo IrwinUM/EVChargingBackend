@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "C5VwlC2FkSk=",
+  "dgSpecHash": "sS8TXuwCNQI=",
   "success": true,
   "projectFilePath": "/workspaces/EVChargingBackend/tests/IntegrationTests/EVChargingBackend.IntegrationTests.csproj",
   "expectedPackageFiles": [

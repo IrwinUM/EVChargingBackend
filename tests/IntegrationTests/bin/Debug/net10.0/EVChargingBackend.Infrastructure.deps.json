@@ -187,7 +187,8 @@
       "EVChargingBackend.Application/1.0.0": {
         "dependencies": {
           "EVChargingBackend.Domain": "1.0.0",
-          "FluentValidation": "12.1.1"
+          "FluentValidation": "12.1.1",
+          "Microsoft.EntityFrameworkCore": "10.0.8"
         },
         "runtime": {
           "EVChargingBackend.Application.dll": {

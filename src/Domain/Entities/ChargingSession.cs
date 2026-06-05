@@ -1,3 +1,5 @@
+using EVChargingBackend.Domain.Enums;
+
 namespace EVChargingBackend.Domain.Entities;
 
 public class ChargingSession
