@@ -1,0 +1,3 @@
+namespace EVChargingBackend.Application.Commands.ChargingSessions;
+
+public record CompleteChargingSessionCommand(Guid SessionId);
