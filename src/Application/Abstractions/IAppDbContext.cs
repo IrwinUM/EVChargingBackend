@@ -5,6 +5,8 @@ namespace EVChargingBackend.Application.Abstractions;
 
 public interface IAppDbContext
 {
+    DbSet<Wallet> Wallets { get; }
+
     DbSet<ChargingSession> ChargingSessions { get; }
 
     DbSet<WalletTransaction> WalletTransactions { get; }
