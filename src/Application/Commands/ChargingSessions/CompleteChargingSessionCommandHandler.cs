@@ -1,53 +1,60 @@
-using EVChargingBackend.Domain.Enums;
-using EVChargingBackend.Domain.Entities;
+using EVChargingBackend.Application.Abstractions;
 using EVChargingBackend.Application.Common;
+using EVChargingBackend.Domain.Entities;
+using EVChargingBackend.Domain.Enums;
+using Microsoft.EntityFrameworkCore;
 
 namespace EVChargingBackend.Application.Commands.ChargingSessions;
 
 public class CompleteChargingSessionCommandHandler
 {
-    private readonly List<ChargingSession> _sessions;
-    private readonly List<WalletTransaction> _transactions;
+    private readonly IAppDbContext _dbContext;
 
-    public CompleteChargingSessionCommandHandler(
-        List<ChargingSession> sessions,
-        List<WalletTransaction> transactions)
+    public CompleteChargingSessionCommandHandler(IAppDbContext dbContext)
     {
-        _sessions = sessions;
-        _transactions = transactions;
+        _dbContext = dbContext;
     }
 
-    public void Handle(CompleteChargingSessionCommand command)
+    public async Task Handle(
+        CompleteChargingSessionCommand command,
+        CancellationToken cancellationToken)
     {
-        var session = _sessions.FirstOrDefault(x => x.Id == command.SessionId);
+        var session = await _dbContext.ChargingSessions
+            .FirstOrDefaultAsync(x => x.Id == command.SessionId, cancellationToken);
 
         if (session == null)
             throw new Exception(ErrorMessages.SessionNotFound);
 
-        if (session.Status != ChargingSessionStatus.InProgress)
-            throw new Exception(ErrorMessages.SessionNotInProgress);
-
-        // 🔥 Idempotency check
-        var alreadyCharged = _transactions.Any(x => x.SessionId == session.Id);
+        var alreadyCharged = await _dbContext.WalletTransactions
+            .AnyAsync(x => x.SessionId == session.Id, cancellationToken);
 
         if (alreadyCharged)
             throw new Exception(ErrorMessages.AlreadyCompleted);
 
-        var cost = session.EnergyKwh * session.TariffRatePerKwh;
+        if (session.Status != ChargingSessionStatus.InProgress)
+            throw new Exception(ErrorMessages.SessionNotInProgress);
 
-        var userTransactions = _transactions
-            .Where(x => x.UserId == session.UserId);
+        var cost = decimal.Round(
+            session.EnergyKwh * session.TariffRatePerKwh,
+            2,
+            MidpointRounding.AwayFromZero);
 
-        var balance =
-            userTransactions.Where(x => x.Type == TransactionType.Credit).Sum(x => x.Amount)
-            -
-            userTransactions.Where(x => x.Type == TransactionType.Debit).Sum(x => x.Amount);
+        var credits = await _dbContext.WalletTransactions
+            .Where(x => x.UserId == session.UserId && x.Type == TransactionType.Credit)
+            .Select(x => (decimal?)x.Amount)
+            .SumAsync(cancellationToken) ?? 0m;
+
+        var debits = await _dbContext.WalletTransactions
+            .Where(x => x.UserId == session.UserId && x.Type == TransactionType.Debit)
+            .Select(x => (decimal?)x.Amount)
+            .SumAsync(cancellationToken) ?? 0m;
+
+        var balance = credits - debits;
 
         if (balance < cost)
             throw new Exception(ErrorMessages.InsufficientFunds);
 
-        // Debit transaction
-        _transactions.Add(new WalletTransaction
+        _dbContext.WalletTransactions.Add(new WalletTransaction
         {
             Id = Guid.NewGuid(),
             UserId = session.UserId,
@@ -58,5 +65,7 @@ public class CompleteChargingSessionCommandHandler
         });
 
         session.Status = ChargingSessionStatus.Completed;
+
+        await _dbContext.SaveChangesAsync(cancellationToken);
     }
 }
